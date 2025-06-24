@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Project Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Selamat Datang di produk keren kami!</h1>
+        <p>Solusi terbaik untuk semua kebutuhan Anda. Inovatif, mudah digunakan, dan efisien.</p>
+        <a href="#belajar-lebih" class="cta-button">Pelajari Lebih Lanjut</a>
+    </header>
+
+    <section id="fitur" class="features">
+        <h2>Fitur Unggulan kami</h2>
+        <div class="features-item hidden"> <img src="images/icon-fitur-a.png" alt="Ikon Untuk Fitur A">
+            <h3>Fitur A</h3>
+            <p>Deskripsi singkat tentang betapa hebatnya Fitur A ini.</p>
+        </div>
+        <div class="features-item hidden"> <img src="images/icon-fitur-b.png" alt="Ikon untuk Fitur B">
+            <h3>Fitur B</h3>
+            <p>Deskripsi singkat tentang manfaat luar biasa dari Fitur B</p>
+        </div>
+        <div class="features-item hidden"> <img src="images/icon-fitur-c.png" alt="Ikon untuk Fitur C">
+            <h3>Fitur C</h3>
+            <p>Deskripsi singkat tentang manfaat luar biasa dari Fitur C</p>
+        </div>
+    </section>
+
+    <section id="kalkulator" class="calculator-section">
+        <h2>kalkulator Harga</h2>
+        <p>Pilih jumlah produk yang Anda inginkan di bawah ini!</p>
+        <div class="product-list">
+            <div class="product-item" data-price="150000">
+                <img src="images/icon-fitur-a.png" alt="Produk A">
+                <h3>Produk A - Basic</h3>
+                <p class="price">Rp 150.000</p>
+                <div class="quantity-selector">
+                    <label for="qty-a">Jumlah :</label>
+                    <input class="quantity-input" type="number" id="qty-a" value="0" min="0">
+                </div>
+            </div>
+
+            <div class="product-item" data-price="250000">
+                <img src="images/icon-fitur-b.png" alt="Produk B">
+                <h3>Produk B - Pro</h3>
+                <p class="price">Rp 250.000</p>
+                <div class="quantity-selector">
+                    <label for="qty-b">Jumlah :</label>
+                    <input class="quantity-input" type="number" id="qty-b" value="0" min="0">
+                </div>
+            </div>
+
+            <div class="product-item" data-price="400000">
+                <img src="images/icon-fitur-c.png" alt="Produk C">
+                <h3>Produk C - Enterprise</h3>
+                <p class="price">Rp 400.000</p>
+                <div class="quantity-selector">
+                    <label for="qty-c">Jumlah :</label>
+                    <input class="quantity-input" type="number" id="qty-c" value="0" min="0">
+                </div>
+            </div>
+        </div>
+        
+        <div class="total-section">
+            <h2>Total Harga:</h2>
+            <p id="total-price">Rp 0</p>
+        </div>
+    </section>
+
+    <section id="belajar-lebih" class="cta-section">
+        <h2>Siap untuk Mencoba?</h2>
+        <p>Bergabunglah dengan ribuan pengguna puas lainnya sekarang juga!</p>
+        <a href="#beli" class="cta-button" id="buka-modal-btn">Beli Sekarang!</a>
+    </section>
+
+    <section id="kontak" class="contact-section">
+        <h2>Hubungi Kami</h2>
+        <p>Punya pertanyaan? Isi formulir di bawah ini dan kami akan segera merespon.</p>
+
+        <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+                <label for="nama">Nama Anda:</label>
+                <input type="text" name="nama_pengguna" id="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Anda:</label>
+                <input type="email" id="email" name="email_pengguna" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pesan">Pesan Anda:</label>
+                <textarea id="pesan" name="Pesan_pengguna" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="cta-button">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2025 Nama Perusahaan Anda. Hak Cipta Dilindungi.</p>
+    </footer>
+    <div id="register-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-button">&times;</button>
+            <h2>Daftar Sekarang</h2>
+            <p>Dapatkan akses ke penawaran eksklusif kami!</p>
+            <form action="#" method="post" class="modal-form" id="form-registrasi">
+                <div class="form-group">
+                    <label for="modal-nama">Nama Lengkap :</label>
+                    <input type="text" name="nama_lengkap" id="modal-nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Alamat Email :</label>
+                    <input type="email" id="modal-email" name ="email_daftar" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-password">Buat Passowrd:</label>
+                    <input type="password" id="modal-password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-telp">Nomor Telepon :</label>
+                    <input type="tel" id="modal-telp" name="telepon" required>
+                </div>
+                <button type="submit" class="cta-button">Buat Akun</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
