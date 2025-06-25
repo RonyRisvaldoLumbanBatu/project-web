@@ -24,7 +24,7 @@
                 <a href="#" class="text-button">Pelajari Detailnya</a>
             </div>
             <div class="features-image">
-                <img src="images/icon-fitur-a.png" alt="Ikon untuk Fitur A">
+                <img src="images/icon-fitur-a.png" alt="Ikon untuk Fitur A" loading="lazy">
             </div>
         </div>
 
@@ -35,7 +35,7 @@
                 <a href="#" class="text-button">Lihat Fitur Keamanan &rarr;</a>
             </div>
             <div class="features-image">
-                <img src="images/icon-fitur-b.png" alt="Ikon untuk Fitur B">
+                <img src="images/icon-fitur-b.png" alt="Ikon untuk Fitur B" loading="lazy">
             </div>
         </div>
 
@@ -46,18 +46,77 @@
                 <a href="#" class="text-button">Info Skalabilitas &rarr;</a>
             </div>
             <div class="features-image">
-                <img src="images/icon-fitur-c.png" alt="Ikon untuk Fitur C">
+                <img src="images/icon-fitur-c.png" alt="Ikon untuk Fitur C" loading="lazy">
             </div>
         </div>
 
+    </section>
+
+    <section id="harga" class="pricing-section">
+        <h2>Pilih Paket yang Tepat Untuk Anda</h2>
+        <p>Solusi transparan tanpa biaya tersembunyi. Mulai dari kebutuhan personal hingga skala enterprise.</p>
+
+        <label for='billing-toggle' class="billing-toggle-container">
+            <span>Bayar Bulanan</span>
+            <div class="toggle-switch">
+                <input type="checkbox" id="billing-toggle">
+                <span class="slider"></span>
+            </div>
+            <span>Bayar Tahunan (Diskon!)</span>
+        </label>
+
+        <div class="pricing-table-container">
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Fitur</th>
+                        <th>Produk A (Basic)</th>
+                        <th class="recommended">Produk B (Pro)</th>
+                        <th>Produk C (Enterprise)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jumlah Pengguna</td>
+                        <td>1 Pengguna</td>
+                        <td class="recommended">Hingga 10 Pengguna</td>
+                        <td>Tak Terbatas</td>
+                    </tr>
+                    <tr>
+                        <td>Penyimpanan Awan</td>
+                        <td>10 GB</td>
+                        <td class="recommended">100 GB</td>
+                        <td>Tak Terbatas</td>
+                    </tr>
+                    <tr>
+                        <td>Dukungan Prioritas</td>
+                        <td><i class="fas fa-times"></i></td>
+                        <td class="recommended"><i class="fas fa-check"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Fitur Enterprise</td>
+                        <td><i class="fas fa-times"></i></td>
+                        <td class="recommended"><i class="fas fa-times"></i></td>
+                        <td><i class="fas fa-check"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Harga Produk</td>
+                        <td data-harga-bulanan="150000" data-harga-tahunan="1440000"><strong>Rp 150.000</strong></td>
+                        <td class="recommended" data-harga-bulanan="250000" data-harga-tahunan="2400000"><strong>Rp 250.000</strong></td>
+                        <td data-harga-bulanan="400000" data-harga-tahunan="3840000"><strong>Rp 400.000</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <section id="kalkulator" class="calculator-section">
         <h2>kalkulator Harga</h2>
         <p>Pilih jumlah produk yang Anda inginkan di bawah ini!</p>
         <div class="product-list">
-            <div class="product-item" data-price="150000">
-                <img src="images/icon-fitur-a.png" alt="Produk A">
+            <div class="product-item" data-harga-bulanan="150000" data-harga-tahunan="1440000">
+                <img src="images/icon-fitur-a.png" alt="Produk A" loading="lazy">
                 <h3>Produk A - Basic</h3>
                 <p class="price">Rp 150.000</p>
                 <div class="quantity-selector">
@@ -66,8 +125,8 @@
                 </div>
             </div>
 
-            <div class="product-item" data-price="250000">
-                <img src="images/icon-fitur-b.png" alt="Produk B">
+            <div class="product-item" data-harga-bulanan="250000" data-harga-tahunan="2400000">
+                <img src="images/icon-fitur-b.png" alt="Produk B" loading="lazy">
                 <h3>Produk B - Pro</h3>
                 <p class="price">Rp 250.000</p>
                 <div class="quantity-selector">
@@ -76,8 +135,8 @@
                 </div>
             </div>
 
-            <div class="product-item" data-price="400000">
-                <img src="images/icon-fitur-c.png" alt="Produk C">
+            <div class="product-item" data-harga-bulanan="400000" data-harga-tahunan="3840000">
+                <img src="images/icon-fitur-c.png" alt="Produk C" loading="lazy">
                 <h3>Produk C - Enterprise</h3>
                 <p class="price">Rp 400.000</p>
                 <div class="quantity-selector">
@@ -89,9 +148,65 @@
         
         <div class="total-section">
             <h2>Total Harga:</h2>
-            <p id="total-price">Rp 0</p>
+            <p id="total-price" aria-live="polite">Rp 0</p>
         </div>
     </section>
+
+    <section id="testimonial" class="testimonial-section">
+        <h2>Apa Kata Mereka?</h2>
+        <p>Ribuan pelanggan telah mempercayai kami. Inilah beberapa cerita meraka.</p>
+
+        <div class="testimonial-container">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                    <p>"Produk ini benar-benar mengubah cara kami bekerja. Lebih efisien dan hasilnya luar biasa. Dukungan timnya juga sangat responsif!"</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/60?img=1" alt="Foto Pelanggan 1" loading="lazy">
+                    <div class="author-info">
+                        <strong>Ahmad Maulana</strong>
+                        <span>CEO, Startup Maju</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                    <p>"Awalnya ragu, tapi setelah mencoba versi Pro, saya tidak bisa kembali ke cara lama. Fitur keamannya memberi ketenangan."</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/60?img=25" alt="Foto Pelanggan 2" loading="lazy"> 
+                    <div class="author-info">
+                        <strong>Siti Lestari</strong>
+                        <span>Manajer Produk, Kreatif Digital</span>
+                    </div>                         
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                    <p>"Skalabilitas nyata. Bisnis kami tumbuh 300% dan produk ini mampu mengimbanginya tanpa masalah sama sekali. Sangat direkomendasikan."</p>
+                </blockquote>
+                <div class="testimonial-author">
+                    <img src="https://i.pravatar.cc/60?img=32" alt="Foto Pelanggan 3" loading="lazy">
+                    <div class="author-info">
+                        <strong>Budi Santoso</strong>
+                        <span>CTO, Corp Enterprise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section id="belajar-lebih" class="cta-section">
         <h2>Siap untuk Mencoba?</h2>
@@ -158,6 +273,10 @@
             </form>
         </div>
     </div>
+    <a href="#" id="kembali-ke-atas" class="tombol-kembali-ke-atas">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <script src="script.js"></script>
 </body>
 </html>
